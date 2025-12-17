@@ -7,10 +7,10 @@ import { VoiceReader } from '@/components/VoiceReader';
 import { cn } from '@/lib/utils';
 
 const shapes = [
-  { name: 'Lingkaran', desc: 'Bentuk bulat tanpa sudut', color: 'bg-primary', shape: 'rounded-full' },
-  { name: 'Segitiga', desc: 'Bentuk dengan 3 sudut', color: 'bg-secondary', clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' },
-  { name: 'Persegi', desc: 'Bentuk kotak dengan 4 sisi sama', color: 'bg-pink', shape: 'rounded-lg' },
-  { name: 'Persegi Panjang', desc: 'Bentuk kotak memanjang', color: 'bg-green', shape: 'rounded-lg' },
+  { name: 'Lingkaran', desc: 'Bentuk bulat tanpa sudut', color: 'bg-primary', shape: 'rounded-full', size: 'w-16 h-16 md:w-20 md:h-20' },
+  { name: 'Segitiga', desc: 'Bentuk dengan 3 sudut', color: 'bg-secondary', clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)', size: 'w-16 h-16 md:w-20 md:h-20' },
+  { name: 'Persegi', desc: 'Bentuk kotak dengan 4 sisi sama', color: 'bg-pink', shape: 'rounded-lg', size: 'w-16 h-16 md:w-20 md:h-20' },
+  { name: 'Persegi Panjang', desc: 'Bentuk kotak memanjang', color: 'bg-green', shape: 'rounded-lg', size: 'w-20 h-16 md:w-24 md:h-20' },
 ];
 
 const Materi1Page = () => {
@@ -132,9 +132,9 @@ const Materi1Page = () => {
                         selectedShape === shape.name ? 'ring-4 ring-accent' : ''
                       )}
                     >
-                      <div 
+                      <div
                         className={cn(
-                          'w-16 h-16 md:w-20 md:h-20',
+                          shape.size,
                           shape.color,
                           shape.shape,
                           'shadow-lg'
